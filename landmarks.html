@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egypt Landmarks</title>
+    <link rel="stylesheet" href="CSS/landmarks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a href="Home.html" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <a href="booking.html" class="back-arrow-1">
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    <div class="filter-bar">
+        <h1>Explore Egypt by Governorate</h1>
+        <select id="governorateFilter">
+            <option value="all">All Governorates</option>
+            <option value="cairo">Cairo</option>
+            <option value="giza">Giza</option>
+            <option value="luxor">Luxor</option>
+            <option value="aswan">Aswan</option>
+        </select>
+    </div>
+
+    <section class="landmarks-container" id="landmarks">
+        <div class="landmark" data-governorate="giza">
+            <div class="landmark-header">
+                <h2>Pyramids of Giza</h2>
+                <span class="rating"><i class="fas fa-star"></i> 4.8/5</span>
+            </div>
+            <div class="landmark-content">
+                <div class="main-image" style="background-image: url('./Images/The\ Pyramids\ of\ Giza.webp');"></div>
+                <div class="landmark-details">
+                    <p>The Pyramids of Giza, built over 4,500 years ago, are the last surviving wonder of the ancient world. The Great Pyramid, constructed for Pharaoh Khufu, was the tallest man-made structure for over 3,800 years at 146.5 meters. This complex includes the pyramids of Khufu, Khafre, and Menkaure, surrounded by smaller pyramids and cemeteries.</p>
+                    <ul class="landmark-facts">
+                        <li><i class="fas fa-map-marker-alt"></i> Giza Plateau, Giza</li>
+                        <li><i class="fas fa-users"></i> 5M+ Visitors</li>
+                        <li><i class="fas fa-clock"></i> Built: 2630 BC</li>
+                    </ul>
+                    <div class="video-links">
+                        <h3>Videos:</h3>
+                        <a href="https://youtu.be/CEl6P5wo6ro?si=1z77TdW2sABazjWZ" target="_blank">Great Pyramid Tour</a>
+                        <a href="https://youtu.be/8AgeNvHZ_ks?si=HW1ynbRqHh42YvYd" target="_blank">Secrets Revealed</a>
+                    </div>
+                </div>
+            </div>
+            <div class="visitor-experiences">
+                <h3>Visitor Experiences</h3>
+                <div class="experience-list" id="experienceList-pyramids"></div>
+                <form class="experience-form" data-landmark="pyramids">
+                    <textarea placeholder="Share your experience..." required></textarea>
+                    <label for="file-pyramids" class="upload-btn"><i class="fas fa-upload"></i> Upload Photo</label>
+                    <input type="file" id="file-pyramids" accept="image/*">
+                    <button type="submit">Add Experience</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="landmark" data-governorate="giza">
+            <div class="landmark-header">
+                <h2>Great Sphinx</h2>
+                <span class="rating"><i class="fas fa-star"></i> 4.7/5</span>
+            </div>
+            <div class="landmark-content">
+                <div class="main-image" style="background-image: url('./Images/Sphinx\ of\ Giza.webp');"></div>
+                <div class="landmark-details">
+                    <p>The Great Sphinx, carved around 2500 BC, features a lion’s body and a human head, likely representing Pharaoh Khafre. At 73 meters long and 20 meters high, it guards the Giza Plateau and faces east towards the sunrise.</p>
+                    <ul class="landmark-facts">
+                        <li><i class="fas fa-map-marker-alt"></i> Giza Plateau, Giza</li>
+                        <li><i class="fas fa-users"></i> 4M+ Visitors</li>
+                        <li><i class="fas fa-ruler"></i> Length: 73 meters</li>
+                    </ul>
+                    <div class="video-links">
+                        <h3>Videos:</h3>
+                        <a href="https://youtu.be/zGNctMdQuNI?si=DGIKiA4RuTkXxDKC" target="_blank">Sphinx History</a>
+                        <a href="https://youtu.be/3DKKdzqSr6I?si=MICg8WmwZvi1w668" target="_blank">Facts and secrets</a>
+                    </div>
+                </div>
+            </div>
+            <div class="visitor-experiences">
+                <h3>Visitor Experiences</h3>
+                <div class="experience-list" id="experienceList-sphinx"></div>
+                <form class="experience-form" data-landmark="sphinx">
+                    <textarea placeholder="Share your experience..." required></textarea>
+                    <label for="file-sphinx" class="upload-btn"><i class="fas fa-upload"></i> Upload Photo</label>
+                    <input type="file" id="file-sphinx" accept="image/*">
+                    <button type="submit">Add Experience</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="landmark" data-governorate="luxor">
+            <div class="landmark-header">
+                <h2>Luxor Temple</h2>
+                <span class="rating"><i class="fas fa-star"></i> 4.6/5</span>
+            </div>
+            <div class="landmark-content">
+                <div class="main-image" style="background-image: url('./Images/facing-luxor-temple.webp');"></div>
+                <div class="landmark-details">
+                    <p>Luxor Temple, founded in 1400 BC, is a stunning example of ancient Egyptian architecture. Located on the east bank of the Nile, it was dedicated to the god Amun and served as a center for religious festivals.</p>
+                    <ul class="landmark-facts">
+                        <li><i class="fas fa-map-marker-alt"></i> Luxor, Egypt</li>
+                        <li><i class="fas fa-users"></i> 2M+ Visitors</li>
+                        <li><i class="fas fa-clock"></i> Built: 1400 BC</li>
+                    </ul>
+                    <div class="video-links">
+                        <h3>Videos:</h3>
+                        <a href="https://youtu.be/Xm5WyKzq_Eg?si=YmG-k3pfXOxe1tWI" target="_blank">Luxor Temple Tour</a>
+                        <a href="https://youtu.be/CqO4PE4uZhc?si=xzyEtjiIPD4B4_O3" target="_blank">History Unveiled</a>
+                    </div>
+                </div>
+            </div>
+            <div class="visitor-experiences">
+                <h3>Visitor Experiences</h3>
+                <div class="experience-list" id="experienceList-luxor"></div>
+                <form class="experience-form" data-landmark="luxor">
+                    <textarea placeholder="Share your experience..." required></textarea>
+                    <label for="file-luxor" class="upload-btn"><i class="fas fa-upload"></i> Upload Photo</label>
+                    <input type="file" id="file-luxor" accept="image/*">
+                    <button type="submit">Add Experience</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="landmark" data-governorate="aswan">
+            <div class="landmark-header">
+                <h2>Abu Simbel Temples</h2>
+                <span class="rating"><i class="fas fa-star"></i> 4.9/5</span>
+            </div>
+            <div class="landmark-content">
+                <div class="main-image" style="background-image: url('./Images/Abosumbal.webp');"></div>
+                <div class="landmark-details">
+                    <p>The Abu Simbel Temples, built by Ramses II in the 13th century BC, are renowned for their massive rock-cut statues. The Great Temple features four colossal statues of Ramses II, each 20 meters tall, and was relocated in the 1960s to save it from flooding.</p>
+                    <ul class="landmark-facts">
+                        <li><i class="fas fa-map-marker-alt"></i> Abu Simbel, Aswan</li>
+                        <li><i class="fas fa-users"></i> 1M+ Visitors</li>
+                        <li><i class="fas fa-clock"></i> Built: 1264 BC</li>
+                    </ul>
+                    <div class="video-links">
+                        <h3>Videos:</h3>
+                        <a href="https://youtu.be/D2qoZDdg6ho?si=4F0ZxSsPHpVaHeHW" target="_blank">Abu Simbel Tour</a>
+                        <a href="https://youtu.be/oCrDhPt02LA?si=YVeXONyOl65R6cOe" target="_blank">Relocation Story</a>
+                    </div>
+                </div>
+            </div>
+            <div class="visitor-experiences">
+                <h3>Visitor Experiences</h3>
+                <div class="experience-list" id="experienceList-abusimbel"></div>
+                <form class="experience-form" data-landmark="abusimbel">
+                    <textarea placeholder="Share your experience..." required></textarea>
+                    <label for="file-abusimbel" class="upload-btn"><i class="fas fa-upload"></i> Upload Photo</label>
+                    <input type="file" id="file-abusimbel" accept="image/*">
+                    <button type="submit">Add Experience</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="landmark" data-governorate="cairo">
+            <div class="landmark-header">
+                <h2>Saladin Citadel</h2>
+                <span class="rating"><i class="fas fa-star"></i> 4.5/5</span>
+            </div>
+            <div class="landmark-content">
+                <div class="main-image" style="background-image: url('./Images/Great-pictures-of-Saladin-Citadel.jpg');"></div>
+                <div class="landmark-details">
+                    <p>The Saladin Citadel, built in the 12th century by Salah al-Din (Saladin), overlooks Cairo and houses the stunning Mohamed Ali Mosque. It served as the seat of government for nearly 700 years and offers panoramic views of the city.</p>
+                    <ul class="landmark-facts">
+                        <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                        <li><i class="fas fa-users"></i> 3M+ Visitors</li>
+                        <li><i class="fas fa-clock"></i> Built: 1176 AD</li>
+                    </ul>
+                    <div class="video-links">
+                        <h3>Videos:</h3>
+                        <a href="https://youtu.be/mmILt9rvMf4?si=fgCHgoa1Ei61EIsi" target="_blank">Citadel Tour</a>
+                        <a href="https://youtu.be/FMOLwBcN8lk?si=9KSqKPU_INeuUnVQ" target="_blank">Mohamed Ali Mosque</a>
+                    </div>
+                </div>
+            </div>
+            <div class="visitor-experiences">
+                <h3>Visitor Experiences</h3>
+                <div class="experience-list" id="experienceList-citadel"></div>
+                <form class="experience-form" data-landmark="citadel">
+                    <textarea placeholder="Share your experience..." required></textarea>
+                    <label for="file-citadel" class="upload-btn"><i class="fas fa-upload"></i> Upload Photo</label>
+                    <input type="file" id="file-citadel" accept="image/*">
+                    <button type="submit">Add Experience</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <script src="JS/landmarks.js"></script>
+
+</body>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Discover Egypt</h3>
+            <p>Explore the wonders of Egypt with us. Your journey through history starts here!</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="landmarks.html">Landmarks</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Discover Egypt. All Rights Reserved.</p>
+    </div>
+</footer>
+</html>

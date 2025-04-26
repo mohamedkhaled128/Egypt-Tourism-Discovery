@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Discover Egypt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/booking.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Discover Egypt</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="landmarks.html">Landmarks</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="login&reg.html">Sign Out</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="header-section">
+        <h1>Unlock the Gates of History and Civilization</h1>
+    </section>
+
+    <section class="search-section">
+        <form class="search-form" action="landmark_details.html" method="GET">
+            <input type="text" name="landmark" placeholder="Search for a Landmark">
+            <select name="landmark_select">
+                <option value="" disabled selected>Or Select a Landmark</option>
+                <option value="Giza Pyramids">Giza Pyramids</option>
+                <option value="Luxor">Luxor</option>
+                <option value="Aswan">Aswan</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Sharm El-Sheikh">Sharm El-Sheikh</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <script src="JS/home.js"></script>
+    <script src="JS/booking.js"></script>
+</body>
+</html>

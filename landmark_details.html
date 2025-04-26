@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landmark Details - Discover Egypt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/landmark_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Discover Egypt</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="landmarks.html">Landmarks</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="login&reg.html">Sign Out</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="landmark-header" id="landmark-header">
+        <div class="header-overlay">
+            <h1 id="landmark-name"></h1>
+        </div>
+    </section>
+
+    <section class="details-section">
+        <div class="location">
+            <label><i class="fas fa-map-marker-alt"></i> Location:</label>
+            <select id="location-select">
+                <option value=""></option>
+            </select>
+        </div>
+        <form class="booking-form" action="#" method="GET">
+            <div class="form-header">
+                <h2>Plan Your Visit</h2>
+                <p>Customize your trip and book now!</p>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-calendar-alt"></i> Month</label>
+                    <input type="month" name="month" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar-day"></i> Date</label>
+                    <input type="date" name="date" required>
+                </div>
+            </div>
+            <div class="options-grid">
+                <div class="option-card">
+                    <i class="fas fa-user"></i>
+                    <h3>Adult</h3>
+                    <p>EGP 350</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-child"></i>
+                    <h3>Child</h3>
+                    <p>EGP 200</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Guide</h3>
+                    <p>EGP 100</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-bus"></i>
+                    <h3>Transport</h3>
+                    <p>EGP 200</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Lunch</h3>
+                    <p>EGP 600</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Snacks</h3>
+                    <p>EGP 150</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-coffee"></i>
+                    <h3>Drinks</h3>
+                    <p>EGP 100</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Souvenirs</h3>
+                    <p>EGP 300</p>
+                    <div class="counter">
+                        <button type="button" class="decrement">-</button>
+                        <span class="count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
+                    <span class="total">EGP 0</span>
+                </div>
+            </div>
+            <div class="total-cost">
+                <span>Total Cost:</span>
+                <span id="total-cost">EGP 0</span>
+            </div>
+            <input type="hidden" name="landmark" id="landmark-input">
+            <input type="hidden" name="adults" class="adults-count" value="0">
+            <input type="hidden" name="children" class="children-count" value="0">
+            <input type="hidden" name="guide" class="guide-count" value="0">
+            <input type="hidden" name="transport" class="transport-count" value="0">
+            <input type="hidden" name="lunch" class="lunch-count" value="0">
+            <input type="hidden" name="snacks" class="snacks-count" value="0">
+            <input type="hidden" name="drinks" class="drinks-count" value="0">
+            <input type="hidden" name="souvenirs" class="souvenirs-count" value="0">
+            <div class="form-buttons">
+                <button type="submit" class="book-btn">Book Now</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Discover Egypt</h3>
+                <p>Explore the wonders of Egypt with us. Your journey through history starts here!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="landmarks.html">Landmarks</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Discover Egypt. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="JS/home.js"></script>
+    <script src="JS/landmark_details.js"></script>
+</body>
+</html>

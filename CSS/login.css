@@ -1,0 +1,278 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Reset default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body styles: Background with softer Egyptian-themed gradient and image */
+body {
+    background: 
+        linear-gradient(to right, rgba(20, 52, 164, 0.5), rgba(234, 215, 187, 0.5)), /* Softer Gradient: Nile blue to Warm Sandy */
+        url('../Images/PINN.jpg') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Main container for Sign In/Sign Up form */
+.container {
+    background-color: #EAD7BB; /* Warm Sandy background for Egyptian vibe */
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly softer shadow */
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+/* Paragraph styles inside container */
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+    color: #1434A4; /* Nile blue for readability */
+}
+
+/* Span styles inside container */
+.container span {
+    font-size: 12px;
+    color: #1434A4; /* Nile blue for consistency */
+}
+
+/* Links inside container (including "Forget Password") */
+.container a {
+    color: #1434A4; /* Nile blue for better visibility on sandy background */
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+/* Buttons inside container */
+.container button {
+    background-color: #1434A4; /* Nile blue */
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect for buttons */
+.container button:hover {
+    background-color: #DAA520; /* Dark Gold on hover */
+    color: #1434A4; /* Nile blue text */
+}
+
+/* Hidden button styles (used in toggle, e.g., "Sign In" and "Sign Up" buttons) */
+.container button.hidden {
+    background-color: #DAA520; /* Dark Gold for harmony with the toggle gradient */
+    border: none; /* Remove border */
+    color: #1434A4; /* Nile blue text for contrast */
+}
+
+/* Hover effect for hidden button */
+.container button.hidden:hover {
+    background-color: #1434A4; /* Nile blue on hover */
+    color: #FFFFFF; /* White text for clarity */
+    border: none; /* Remove border on hover */
+}
+
+/* Form styles inside container */
+.container form {
+    background-color: #EAD7BB; /* Match container background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+/* Input fields inside form */
+.container input {
+    background-color: #FDF6E3; /* Very light sandy for contrast */
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    color: #1434A4; /* Nile blue text */
+}
+
+/* Form container for Sign In/Sign Up */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Sign In form */
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+/* Animation for active Sign In form */
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+
+/* Sign Up form */
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Animation for active Sign Up form */
+.container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+/* Animation keyframes for form transition */
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+/* Social media icons container */
+.social-icons {
+    margin: 20px 0;
+}
+
+/* Social media icons */
+.social-icons a {
+    border: 1px solid #DAA520; /* Dark Gold border for Egyptian theme */
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    color: #1434A4; /* Nile blue for visibility */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+.social-icons a:hover {
+    background-color: #DAA520; /* Dark Gold background on hover */
+    color: #1434A4;
+}
+
+/* Toggle container for switching between Sign In/Sign Up */
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+/* Animation for active toggle container */
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+/* Toggle background and gradient */
+.toggle {
+    background-color: #8B0000; /* Nile silt red base */
+    height: 100%;
+    background: linear-gradient(to right, #8B0000, #DAA520); /* Gradient: Nile silt red to Dark Gold */
+    color: #FFFFFF; /* White text for readability */
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Animation for active toggle */
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+/* Toggle panel for content (e.g., "Welcome to Egypt", "Register with your personal details...", "Sign Up") */
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+    color: #FFFFFF; /* White text for better readability on gradient */
+}
+
+/* Ensure all text inside toggle-panel (including headings and paragraphs) is white */
+.toggle-panel h1,
+.toggle-panel p {
+    color: #FFFFFF; /* White text for "Welcome to Egypt", "Register with your personal details...", etc. */
+}
+
+/* Left toggle panel */
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+/* Animation for active left toggle */
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+/* Right toggle panel */
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+/* Animation for active right toggle */
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
+.form-message {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 500;
+}
